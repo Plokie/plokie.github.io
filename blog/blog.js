@@ -4,7 +4,7 @@ var requests=[];
 
 async function waitForResponses()
 {
-    while(requests.length!=responses){}
+    while(requests.length<=responses){}
 }
 function loadPosts()
 {
