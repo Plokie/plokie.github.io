@@ -39,9 +39,9 @@ function displayPosts()
     var postsSidebar = document.getElementById("sidenav");
     var posts = document.getElementById("blog-posts")
 
-    for(var i=0; i<requests.length; i++)
+    for(var i=requests.length; i!=0; i--)
     {
-        console.log(requests[i].responseText);
+        //console.log(requests[i].responseText);
         posts.innerHTML+="<div class=\"blog-post\">"+requests[i].responseText+"</div>";
     }
 }
