@@ -25,15 +25,15 @@ async function countPosts()
         tryRequests[tryNum-1].onerror=()=>{
             error=true;
         };
-        //console.log(tryNum);
-        //console.log(tryRequests);
+        console.log(tryNum);
+        console.log(tryRequests);
         
         if(tryNum>128) break;
         
         tryNum++;
         if(error) break;
     }
-    console.log(found);
+    console.log("found: "+found);
     return 8;
 }
 
