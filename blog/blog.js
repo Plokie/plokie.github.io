@@ -5,6 +5,9 @@ var numberOfPages = Math.ceil(postCount/postsPerPage);
 var responses=0;
 var requests=[];
 var titles=[];
+var inputField = document.getElementById("pageNumInput");
+inputField.setAttribute("max", numberOfPages.toString());
+
 
 async function waitForResponses()
 {
@@ -58,6 +61,10 @@ function displayPosts()
         //console.log(requests[i].responseText);
         posts.innerHTML+="<div class=\"blog-post\">"+requests[i].responseText+"</div>";
     }
+}
+function pageNumChange()
+{
+    loadPosts(inputField.getAttribute("value"));
 }
 
 
