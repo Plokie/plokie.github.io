@@ -65,8 +65,8 @@ function displayPosts()
 function pageNumChange()
 {
     let pageNumInput = document.getElementById("pageNumInput"); 
-    console.log(pageNumInput.getAttribute("value"));
-    loadPosts(pageNumInput.getAttribute("value"));
+    console.log(pageNumInput.value);
+    loadPosts(pageNumInput.value);
 }
 
 
