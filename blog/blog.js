@@ -13,8 +13,6 @@ async function waitForResponses()
 }
 function loadPosts(pageNum=0)
 {
-    postCount=8;
-    postsPerPage=5;
     responses=0;
     requests=[];
     titles=[];
@@ -61,4 +59,4 @@ function openSectionSidebar(thing)
     console.log(thing.innerHTML)
 }
 
-loadPosts(0);
+loadPosts(1);
