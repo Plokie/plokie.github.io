@@ -1,3 +1,5 @@
+var PageNum=0;
+var numberOfPages = Math.ceil(postCount/postsPerPage);
 var postCount=8;
 var postsPerPage=5;
 var responses=0;
@@ -13,6 +15,9 @@ async function waitForResponses()
 }
 function loadPosts(pageNum=0)
 {
+
+    pageNum = numberOfPages-(pageNum+1);
+
     responses=0;
     requests=[];
     titles=[];
@@ -29,9 +34,9 @@ function loadPosts(pageNum=0)
         requests[i].responseType='text';
         requests[i].onload=()=>{
             responses++;
-            console.log(responses);
-            console.log(requests.length);
-            console.log(requests);
+            //console.log(responses);
+            //console.log(requests.length);
+            //console.log(requests);
             if(responses==requests.length)
             {
                 console.log("done");
@@ -49,7 +54,7 @@ function displayPosts()
 
     for(var i=requests.length-1; i>=0; i--)
     {
-        console.log(i);
+        //console.log(i);
         //console.log(requests[i].responseText);
         posts.innerHTML+="<div class=\"blog-post\">"+requests[i].responseText+"</div>";
     }
@@ -61,4 +66,4 @@ function openSectionSidebar(thing)
     console.log(thing.innerHTML)
 }
 
-loadPosts(1);
+loadPosts(PageNum);
