@@ -4,6 +4,7 @@ var requests=[];
 
 async function waitForResponses()
 {
+    
     while(requests.length>=responses){
         console.log(requests.length+" >= "+responses);
     }
@@ -11,7 +12,7 @@ async function waitForResponses()
 function loadPosts()
 {
     var postsSidebar = document.getElementById("sidenav");
-
+    
     requests=[];
     responses=0;
     for(var i=0; i<postCount; i++)
@@ -23,16 +24,25 @@ function loadPosts()
         requests[i].responseType='text';
         requests[i].onload=()=>{
             responses++;
-            console.log(responses);
         }
         requests[i].send();
     }
 
-    waitForResponses().then(()=>{
-        //console.log("Reponses received apparently.")
-        console.log(requests);
-        displayPosts();
-    });
+
+    while(true)
+    {
+        console.log(responses);
+        if(responses>=requests.length) break;
+    }
+
+    console.log("done");
+
+
+    // waitForResponses().then(()=>{
+    //     //console.log("Reponses received apparently.")
+    //     console.log(requests);
+    //     displayPosts();
+    // });
 }
 function displayPosts()
 {
