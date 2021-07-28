@@ -1,4 +1,4 @@
-var postCount=1;
+var postCount=3;
 var responses=0;
 var requests=[];
 function pageLoaded()
