@@ -48,8 +48,16 @@ function displayPosts()
         posts.innerHTML+="<div class=\"blog-post\">"+requests[i].responseText+"</div>";
     }
 }
-
-
+function loadPage(num=0)
+{
+    //Resets values and loads the page
+    postCount=8;
+    postsPerPage=5;
+    responses=0;
+    requests=[];
+    titles=[];
+    loadPage(num);
+}
 
 
 function openSectionSidebar(thing)
@@ -57,5 +65,4 @@ function openSectionSidebar(thing)
     console.log(thing.innerHTML)
 }
 
-
-loadPosts();
+loadPage(0);
