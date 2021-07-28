@@ -11,30 +11,30 @@ var found=0;
 var error=false;
 async function countPosts()
 {
-    let tryNum=1;
-    let tryRequests=[];
-    while(true)
-    {
-        tryRequests[tryNum-1]=new XMLHttpRequest();
-        tryRequests[tryNum-1].open('GET',"posts/post"+(tryNum)+".html");
-        tryRequests[tryNum-1].responseType='text';
-        tryRequests[tryNum-1].onload=()=>{
-            found++;
-        };
-        tryRequests[tryNum-1].onerror=()=>{
-            found--;
-            error=true;
-        };
-        tryRequests[tryNum-1].send();
-        //console.log(tryNum);
-        //console.log(tryRequests);
+    // let tryNum=1;
+    // let tryRequests=[];
+    // while(true)
+    // {
+    //     tryRequests[tryNum-1]=new XMLHttpRequest();
+    //     tryRequests[tryNum-1].open('GET',"posts/post"+(tryNum)+".html");
+    //     tryRequests[tryNum-1].responseType='text';
+    //     tryRequests[tryNum-1].onload=()=>{
+    //         found++;
+    //     };
+    //     tryRequests[tryNum-1].onerror=()=>{
+    //         found--;
+    //         error=true;
+    //     };
+    //     tryRequests[tryNum-1].send();
+    //     //console.log(tryNum);
+    //     //console.log(tryRequests);
         
-        if(tryNum>128) break;
+    //     if(tryNum>128) break;
         
-        tryNum++;
-        if(error) break;
-    }
-    console.log("found: "+found);
+    //     tryNum++;
+    //     if(error) break;
+    // }
+    // console.log("found: "+found);
     return 8;
 }
 
