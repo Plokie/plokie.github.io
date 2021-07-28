@@ -12,7 +12,7 @@ async function countPosts()
 {
     let tryNum=1;
     let found=0;
-    let error=false;
+    var error=false;
     let tryRequests=[];
     while(true)
     {
@@ -25,10 +25,10 @@ async function countPosts()
         tryRequests[tryNum-1].onerror=()=>{
             error=true;
         };
-        console.log(tryNum);
-        console.log(tryRequests);
+        //console.log(tryNum);
+        //console.log(tryRequests);
         
-        
+        if(tryNum>128) break;
         
         tryNum++;
         if(error) break;
