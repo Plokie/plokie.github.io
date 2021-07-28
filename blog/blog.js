@@ -25,17 +25,14 @@ function loadPosts()
         requests[i].onload=()=>{
             responses++;
             console.log(responses);
-            if(responses==requests.length) console.log("done");
+            if(responses==requests.length)
+            {
+                console.log("done");
+                displayPosts();
+            }
         }
         requests[i].send();
     }
-
-
-    // waitForResponses().then(()=>{
-    //     //console.log("Reponses received apparently.")
-    //     console.log(requests);
-    //     displayPosts();
-    // });
 }
 function displayPosts()
 {
