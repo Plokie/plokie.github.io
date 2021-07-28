@@ -7,12 +7,11 @@ var requests=[];
 var titles=[];
 let inputField = document.getElementById("pageNumInput");
 inputField.setAttribute("max", (numberOfPages-1).toString());
-
+var found=0;
+var error=false;
 async function countPosts()
 {
     let tryNum=1;
-    var found=0;
-    var error=false;
     let tryRequests=[];
     while(true)
     {
@@ -21,9 +20,9 @@ async function countPosts()
         tryRequests[tryNum-1].responseType='text';
         tryRequests[tryNum-1].onload=()=>{
             found++;
-            console.log("loaded");
         };
         tryRequests[tryNum-1].onerror=()=>{
+            found--;
             error=true;
         };
         tryRequests[tryNum-1].send();
