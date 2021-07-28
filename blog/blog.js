@@ -19,9 +19,6 @@ function loadSectionsSidebar()
         requests[i].open('GET',"posts/post"+(i+1)+".html");
         console.log(requests);
         requests[i].responseType='text';
-        requests[i].onload=()=>{
-            responses[i]=requests[i].response;
-        }
         requests[i].send();
     }
 
