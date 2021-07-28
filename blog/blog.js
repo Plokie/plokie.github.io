@@ -19,12 +19,12 @@ async function countPosts()
         tryRequests[tryNum-1]=new XMLHttpRequest();
         tryRequests[tryNum-1].open('GET',"posts/post"+(tryNum)+".html");
         tryRequests[tryNum-1].responseType='text';
-        tryRequests[tryNum-1].onload(()=>{
+        tryRequests[tryNum-1].onload=()=>{
             found++;
-        });
-        tryRequests[tryNum-1].onerror(()=>{
+        };
+        tryRequests[tryNum-1].onerror=()=>{
             error=true;
-        });
+        };
         
         
         
