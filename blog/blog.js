@@ -1,6 +1,6 @@
+var postCount=3;
 var PageNum=0;
-var postCount=8;
-var postsPerPage=5;
+var postsPerPage=10;
 var numberOfPages = Math.ceil(postCount/postsPerPage);
 var responses=0;
 var requests=[];
