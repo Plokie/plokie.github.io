@@ -24,18 +24,11 @@ function loadPosts()
         requests[i].responseType='text';
         requests[i].onload=()=>{
             responses++;
+            console.log(responses);
+            if(responses==requests.length) console.log("done");
         }
         requests[i].send();
     }
-
-
-    while(true)
-    {
-        console.log(responses);
-        if(responses>=requests.length) break;
-    }
-
-    console.log("done");
 
 
     // waitForResponses().then(()=>{
