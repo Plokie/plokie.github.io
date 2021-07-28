@@ -18,8 +18,9 @@ async function waitForResponses()
 }
 function loadPosts(pageNum=0)
 {
-
+    //console.log(numberOfPages);
     pageNum = numberOfPages-(pageNum+1);
+    //console.log(pageNum);
 
     responses=0;
     requests=[];
@@ -65,8 +66,8 @@ function displayPosts()
 function pageNumChange()
 {
     let pageNumInput = document.getElementById("pageNumInput"); 
-    console.log(pageNumInput.value);
-    loadPosts(pageNumInput.value);
+    console.log(parseInt(pageNumInput.value));
+    loadPosts(parseInt(pageNumInput.value));
 }
 
 
