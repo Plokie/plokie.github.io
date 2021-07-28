@@ -21,6 +21,7 @@ async function countPosts()
         tryRequests[tryNum-1].responseType='text';
         tryRequests[tryNum-1].onload=()=>{
             found++;
+            console.log("loaded");
         };
         tryRequests[tryNum-1].onerror=()=>{
             error=true;
