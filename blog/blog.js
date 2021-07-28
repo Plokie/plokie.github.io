@@ -67,9 +67,9 @@ function pageNumChange()
 {
     let pageNumInput = document.getElementById("pageNumInput");
 
-    if(pageNumInt.value>numberOfPages)
+    if(pageNumInput.value>numberOfPages)
     {
-        pageNumInt.value=numberOfPages;
+        pageNumInput.value=numberOfPages;
     }
     else
     {
