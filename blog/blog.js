@@ -11,7 +11,7 @@ inputField.setAttribute("max", (numberOfPages-1).toString());
 async function countPosts()
 {
     let tryNum=1;
-    let found=0;
+    var found=0;
     var error=false;
     let tryRequests=[];
     while(true)
