@@ -65,9 +65,17 @@ function displayPosts()
 }
 function pageNumChange()
 {
-    let pageNumInput = document.getElementById("pageNumInput"); 
-    console.log(parseInt(pageNumInput.value));
-    loadPosts(parseInt(pageNumInput.value));
+    let pageNumInput = document.getElementById("pageNumInput");
+
+    if(pageNumInt.value>numberOfPages)
+    {
+        pageNumInt.value=numberOfPages;
+    }
+    else
+    {
+        console.log(parseInt(pageNumInput.value));
+        loadPosts(parseInt(pageNumInput.value));
+    }
 }
 
 
