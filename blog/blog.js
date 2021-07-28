@@ -24,7 +24,7 @@ function loadPosts(pageNum=0)
     {
         requests[i]=new XMLHttpRequest();
         //console.log("request for: posts/post"+(i+1)+".html")
-        requests[i].open('GET',"posts/post"+(i+1)+".html");
+        requests[i].open('GET',"posts/post"+(i+1+(postsPerPage*pageNum))+".html");
         //console.log(requests);
         requests[i].responseType='text';
         requests[i].onload=()=>{
