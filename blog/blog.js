@@ -36,12 +36,12 @@ function loadPosts(pageNum=0)
         requests[i].send();
     }
 }
-function displayPosts(start=0,end=postCount)
+function displayPosts()
 {
     var postsSidebar = document.getElementById("sidenav");
     var posts = document.getElementById("blog-posts")
 
-    for(var i=end-1; i>=start; i--)
+    for(var i=requests.length-1; i>=0; i--)
     {
         console.log(i);
         //console.log(requests[i].responseText);
