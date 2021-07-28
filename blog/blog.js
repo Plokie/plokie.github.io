@@ -38,7 +38,7 @@ function displayPosts()
 
     for(var i=0; i<requests.length; i++)
     {
-        posts.innerHTML+="<div class=\"blog-post\">"+requests[i].response+"</div>";
+        posts.innerHTML+="<div class=\"blog-post\">"+requests[i].responseText+"</div>";
     }
 }
 
