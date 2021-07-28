@@ -25,6 +25,8 @@ async function countPosts()
         tryRequests[tryNum-1].onerror=()=>{
             error=true;
         };
+        console.log(tryNum);
+        console.log(tryRequests);
         
         
         
