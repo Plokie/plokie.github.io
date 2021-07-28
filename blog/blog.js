@@ -13,6 +13,11 @@ async function waitForResponses()
 }
 function loadPosts(pageNum=0)
 {
+    postCount=8;
+    postsPerPage=5;
+    responses=0;
+    requests=[];
+    titles=[];
     var postsSidebar = document.getElementById("sidenav");
     
     requests=[];
@@ -40,6 +45,7 @@ function displayPosts()
 {
     var postsSidebar = document.getElementById("sidenav");
     var posts = document.getElementById("blog-posts")
+    posts.innerHTML="";
 
     for(var i=requests.length-1; i>=0; i--)
     {
@@ -48,16 +54,6 @@ function displayPosts()
         posts.innerHTML+="<div class=\"blog-post\">"+requests[i].responseText+"</div>";
     }
 }
-function loadPage(num=0)
-{
-    //Resets values and loads the page
-    postCount=8;
-    postsPerPage=5;
-    responses=0;
-    requests=[];
-    titles=[];
-    loadPage(num);
-}
 
 
 function openSectionSidebar(thing)
@@ -65,4 +61,4 @@ function openSectionSidebar(thing)
     console.log(thing.innerHTML)
 }
 
-loadPage(0);
+loadPosts(0);
