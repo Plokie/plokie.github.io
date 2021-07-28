@@ -20,7 +20,7 @@ function loadPosts(pageNum=0)
     
     requests=[];
     responses=0;
-    for(var i=pageNum*postsPerPage; i< Math.min( (pageNum+1)*postsPerPage , postCount ); i++)
+    for(var i=0; i< Math.min( (pageNum+1)*postsPerPage , postCount ) - (postsPerPage*pageNum); i++)
     {
         requests[i]=new XMLHttpRequest();
         //console.log("request for: posts/post"+(i+1)+".html")
@@ -30,7 +30,8 @@ function loadPosts(pageNum=0)
         requests[i].onload=()=>{
             responses++;
             console.log(responses);
-            console.log(requests.length)
+            console.log(requests.length);
+            console.log(requests);
             if(responses==requests.length)
             {
                 console.log("done");
