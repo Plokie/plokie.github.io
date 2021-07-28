@@ -8,14 +8,37 @@ var titles=[];
 let inputField = document.getElementById("pageNumInput");
 inputField.setAttribute("max", (numberOfPages-1).toString());
 
-
-async function waitForResponses()
+async function countPosts()
 {
-    
-    while(requests.length>=responses){
-        console.log(requests.length+" >= "+responses);
+    let tryNum=1;
+    let found=0;
+    let error=false;
+    let tryRequests=[];
+    while(true)
+    {
+        tryRequests[tryNum-1]=new XMLHttpRequest();
+        tryRequests[tryNum-1].open('GET',"posts/post"+(tryNum)+".html");
+        tryRequests[tryNum-1].responseType='text';
+        tryRequests[tryNum-1].onload(()=>{
+            found++;
+        });
+        tryRequests[tryNum-1].onerror(()=>{
+            error=true;
+        });
+        
+        
+        
+        tryNum++;
+        if(error) break;
     }
+    console.log(found);
+    return 8;
 }
+
+countPosts().then((num)=>{
+    postCount=num;
+});
+
 function loadPosts(pageNum=0)
 {
     //console.log(numberOfPages);
