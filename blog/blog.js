@@ -30,6 +30,7 @@ function loadPosts(pageNum=0)
         requests[i].onload=()=>{
             responses++;
             console.log(responses);
+            console.log(requests.length)
             if(responses==requests.length)
             {
                 console.log("done");
