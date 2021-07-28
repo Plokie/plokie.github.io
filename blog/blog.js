@@ -26,8 +26,8 @@ async function countPosts()
             error=true;
         };
         tryRequests[tryNum-1].send();
-        console.log(tryNum);
-        console.log(tryRequests);
+        //console.log(tryNum);
+        //console.log(tryRequests);
         
         if(tryNum>128) break;
         
