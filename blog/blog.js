@@ -39,7 +39,7 @@ function displayPosts()
     var postsSidebar = document.getElementById("sidenav");
     var posts = document.getElementById("blog-posts")
 
-    for(var i=requests.length; i!=0; i--)
+    for(var i=requests.length-1; i!=0; i--)
     {
         console.log(i);
         //console.log(requests[i].responseText);
