@@ -21,6 +21,7 @@ function loadPosts()
         requests[i].responseType='text';
         requests[i].onload=()=>{
             responses++;
+            console.log(responses);
         }
         requests[i].send();
     }
