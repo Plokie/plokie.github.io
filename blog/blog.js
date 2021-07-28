@@ -23,7 +23,7 @@ function loadPosts(pageNum=0)
         //console.log("request for: posts/post"+(i+1)+".html")
         requests[i].open('GET',"posts/post"+(i+1)+".html");
         //console.log(requests);
-        requests[i].responseType='document';
+        requests[i].responseType='text';
         requests[i].onload=()=>{
             responses++;
             console.log(responses);
@@ -45,7 +45,7 @@ function displayPosts()
     {
         console.log(i);
         //console.log(requests[i].responseText);
-        posts.innerHTML+="<div class=\"blog-post\">"+requests[i].response+"</div>";
+        posts.innerHTML+="<div class=\"blog-post\">"+requests[i].responseText+"</div>";
     }
 }
 
