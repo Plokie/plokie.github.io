@@ -1,12 +1,12 @@
 var postCount=3;
 var responses=0;
 var requests=[];
-function pageLoaded()
+
+async function waitForResponses()
 {
-
+    while(requests.length<responses){}
 }
-
-function loadSectionsSidebar()
+function loadPosts()
 {
     var postsSidebar = document.getElementById("sidenav");
 
@@ -15,9 +15,9 @@ function loadSectionsSidebar()
     for(var i=0; i<postCount; i++)
     {
         requests[i]=new XMLHttpRequest();
-        console.log("request for: posts/post"+(i+1)+".html")
+        //console.log("request for: posts/post"+(i+1)+".html")
         requests[i].open('GET',"posts/post"+(i+1)+".html");
-        console.log(requests);
+        //console.log(requests);
         requests[i].responseType='text';
         requests[i].onload=()=>{
             responses++;
@@ -26,19 +26,29 @@ function loadSectionsSidebar()
     }
 
     waitForResponses().then(()=>{
-        console.log("Reponses received apparently.")
+        //console.log("Reponses received apparently.")
         console.log(requests);
+        displayPosts();
     });
 }
-
-async function waitForResponses()
+function displayPosts()
 {
-    while(requests.length<responses){}
+    var postsSidebar = document.getElementById("sidenav");
+    var posts = document.getElementById("blog-posts")
+
+    for(var i=0; i<requests.length; i++)
+    {
+        posts.innerHTML+="<div class=\"blog-post\">"+requests[i].response+"</div>";
+    }
 }
+
+
+
+
 function openSectionSidebar(thing)
 {
     console.log(thing.innerHTML)
 }
 
 
-loadSectionsSidebar();
+loadPosts();
