@@ -64,6 +64,7 @@ function displayPosts()
 }
 function pageNumChange()
 {
+    inputField = document.getElementById("pageNumInput");
     console.log(inputField.getAttribute("value"));
     loadPosts(inputField.getAttribute("value"));
 }
