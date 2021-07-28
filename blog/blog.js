@@ -6,7 +6,7 @@ var responses=0;
 var requests=[];
 var titles=[];
 var inputField = document.getElementById("pageNumInput");
-inputField.setAttribute("max", numberOfPages.toString());
+inputField.setAttribute("max", (numberOfPages-1).toString());
 
 
 async function waitForResponses()
@@ -64,6 +64,7 @@ function displayPosts()
 }
 function pageNumChange()
 {
+    console.log(inputField.getAttribute("value"));
     loadPosts(inputField.getAttribute("value"));
 }
 
