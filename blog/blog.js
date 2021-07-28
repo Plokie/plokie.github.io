@@ -5,7 +5,7 @@ var numberOfPages = Math.ceil(postCount/postsPerPage);
 var responses=0;
 var requests=[];
 var titles=[];
-var inputField = document.getElementById("pageNumInput");
+let inputField = document.getElementById("pageNumInput");
 inputField.setAttribute("max", (numberOfPages-1).toString());
 
 
@@ -64,9 +64,9 @@ function displayPosts()
 }
 function pageNumChange()
 {
-    inputField = document.getElementById("pageNumInput");
-    console.log(inputField.getAttribute("value"));
-    loadPosts(inputField.getAttribute("value"));
+    let pageNumInput = document.getElementById("pageNumInput"); 
+    console.log(pageNumInput.getAttribute("value"));
+    loadPosts(pageNumInput.getAttribute("value"));
 }
 
 
