@@ -1,6 +1,6 @@
-postCount=1;
-
-
+var postCount=1;
+var responses=0;
+var requests=[];
 function pageLoaded()
 {
 
@@ -10,8 +10,8 @@ function loadSectionsSidebar()
 {
     var postsSidebar = document.getElementById("sidenav");
 
-    var requests=[];
-    var responses=[];
+    requests=[];
+    responses=0;
     for(var i=0; i<postCount; i++)
     {
         requests[i]=new XMLHttpRequest();
@@ -19,15 +19,22 @@ function loadSectionsSidebar()
         requests[i].open('GET',"posts/post"+(i+1)+".html");
         console.log(requests);
         requests[i].responseType='text';
+        requests[i].onload=()=>{
+            responses++;
+        }
         requests[i].send();
     }
 
-    requests[requests.length].onload=()=>{
-        console.log("All responses received.")
-        console.log(responses);
-    };
+    waitForResponses().then(()=>{
+        console.log("Reponses received apparently.")
+        console.log(requests);
+    });
 }
 
+async function waitForResponses()
+{
+    while(requests.length<responses){}
+}
 function openSectionSidebar(thing)
 {
     console.log(thing.innerHTML)
