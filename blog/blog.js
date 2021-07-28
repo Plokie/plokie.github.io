@@ -1,5 +1,5 @@
 var postCount=8;
-var postsPerPage=10;
+var postsPerPage=5;
 
 var numberOfPages = Math.ceil(postCount/postsPerPage);
 var responses=0;
