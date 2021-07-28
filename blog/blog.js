@@ -14,9 +14,10 @@ function loadSectionsSidebar()
     var responses=[];
     for(var i=0; i<postCount; i++)
     {
-        requests.push(new XMLHttpRequest());
+        requests[i]=new XMLHttpRequest();
         console.log("request for: posts/post"+(i+1)+".html")
         requests[i].open('GET',"posts/post"+(i+1)+".html");
+        console.log(requests);
         requests[i].responseType='text';
         requests[i].onload=()=>{
             responses[i]=requests[i].response;
