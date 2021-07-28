@@ -19,12 +19,12 @@ function loadSectionsSidebar()
         requests[i].open('GET',"posts/post"+(i+1)+".html");
         requests[i].responseType='text';
         requests[i].onload=()=>{
-            responses[i]=request.response;
+            responses[i]=requests[i].response;
         }
         requests[i].send();
     }
 
-    requests[requests.length].onloadend=()=>{
+    requests[requests.length].onload=()=>{
         console.log("All responses received.")
         console.log(responses);
     };
