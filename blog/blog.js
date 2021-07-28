@@ -1,6 +1,8 @@
-var postCount=3;
+var postCount=8;
+var postsPerPage=5;
 var responses=0;
 var requests=[];
+var titles=[];
 
 async function waitForResponses()
 {
@@ -9,19 +11,19 @@ async function waitForResponses()
         console.log(requests.length+" >= "+responses);
     }
 }
-function loadPosts()
+function loadPosts(pageNum=0)
 {
     var postsSidebar = document.getElementById("sidenav");
     
     requests=[];
     responses=0;
-    for(var i=0; i<postCount; i++)
+    for(var i=pageNum*postsPerPage; i< Math.min( (pageNum+1)*postsPerPage , postCount ); i++)
     {
         requests[i]=new XMLHttpRequest();
         //console.log("request for: posts/post"+(i+1)+".html")
         requests[i].open('GET',"posts/post"+(i+1)+".html");
         //console.log(requests);
-        requests[i].responseType='text';
+        requests[i].responseType='document';
         requests[i].onload=()=>{
             responses++;
             console.log(responses);
@@ -34,12 +36,12 @@ function loadPosts()
         requests[i].send();
     }
 }
-function displayPosts()
+function displayPosts(start=0,end=postCount)
 {
     var postsSidebar = document.getElementById("sidenav");
     var posts = document.getElementById("blog-posts")
 
-    for(var i=requests.length-1; i>=0; i--)
+    for(var i=end-1; i>=start; i--)
     {
         console.log(i);
         //console.log(requests[i].responseText);
