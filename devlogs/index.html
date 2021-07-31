@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="../sources/style.css">
   <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
   <title>Plokie</title>
-  <script src="blog.js" defer></script>
+  <script src="devlogs.js" defer></script>
 </head>
 <body>
 
@@ -33,9 +33,10 @@
     <div class="sidenav" id="sidenav">
       <span class="text">Page:</span><input type="number" value="0" min="0" max="2" onchange="pageNumChange()" id="pageNumInput">
       <h1 style="margin-left: 10%;">Posts</h1>
-      <button class="dropbtn" type="button" onclick="openSectionSidebar(this)">All</button> 
-      <button class="dropbtn" type="button" onclick="openSectionSidebar(this)">General</button> 
-      <button class="dropbtn" type="button" onclick="openSectionSidebar(this)">Game Dev</button> 
+      <!-- <button class="dropbtn" type="button" onclick="openSectionSidebar(this)">All</button>  -->
+      <button class="dropbtn" type="button" onclick="selectSection(this)">Space Game</button> 
+      <button class="dropbtn" type="button" onclick="selectSection(this)">Retail Tycoon</button> 
+      <button class="dropbtn" type="button" onclick="selectSection(this)">Fun2Code</button> 
     </div>
 
     <div class="blog-posts" id="blog-posts">
