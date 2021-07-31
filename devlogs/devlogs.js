@@ -4,7 +4,7 @@ var sectionName="spacegame";
 var postCounts={
     fun2code: 1,
     retailtycoon: 1,
-    spacegame: 1
+    spacegame: 3
 }
 var sectionNames={
     fun2code: "fun2code",
