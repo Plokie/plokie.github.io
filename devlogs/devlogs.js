@@ -1,6 +1,3 @@
-var postCount=1;
-var sectionName="spacegame";
-
 var postCounts={
     fun2code: 1,
     retailtycoon: 1,
@@ -11,6 +8,11 @@ var sectionNames={
     retailtycoon: "retailtycoon",
     spacegame: "spacegame"
 }
+
+var postCount=postCounts.spacegame;
+var sectionName=sectionNames.spacegame;
+
+
 function selectSection(object)
 {
     var selectString = object.innerHTML
