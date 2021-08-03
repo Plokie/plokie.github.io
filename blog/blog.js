@@ -10,7 +10,7 @@ var sectionNames={
 
 var postCount=postCounts.general;
 var sectionName=sectionNames.general;
-var postsPerPage=5;
+var postsPerPage=8;
 var numberOfPages = Math.ceil(postCount/postsPerPage);
 var responses=0;
 var requests=[];
