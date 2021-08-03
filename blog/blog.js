@@ -7,8 +7,8 @@ var sectionNames={
     art: "art"
 }
 
-var postCount=postCounts.spacegame;
-var sectionName=sectionNames.spacegame;
+var postCount=postCounts.general;
+var sectionName=sectionNames.general;
 
 
 var numberOfPages = Math.ceil(postCount/postsPerPage);
