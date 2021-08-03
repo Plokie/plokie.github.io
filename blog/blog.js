@@ -7,11 +7,10 @@ var sectionNames={
     art: "art"
 }
 
-var postsPerPage=5;
+
 var postCount=postCounts.general;
 var sectionName=sectionNames.general;
-
-
+var postsPerPage=5;
 var numberOfPages = Math.ceil(postCount/postsPerPage);
 var responses=0;
 var requests=[];
@@ -20,41 +19,6 @@ let inputField = document.getElementById("pageNumInput");
 inputField.setAttribute("max", (numberOfPages-1).toString());
 var found=0;
 var error=false;
-
-
-//This is a work in progress test thing, i want to try to figure out a way it can automatically count
-//the number of posts in the directory, instead of it being manually recorded.
-async function countPosts()
-{
-    // let tryNum=1;
-    // let tryRequests=[];
-    // while(true)
-    // {
-    //     tryRequests[tryNum-1]=new XMLHttpRequest();
-    //     tryRequests[tryNum-1].open('GET',"posts/post"+(tryNum)+".html");
-    //     tryRequests[tryNum-1].responseType='text';
-    //     tryRequests[tryNum-1].onload=()=>{
-    //         found++;
-    //     };
-    //     tryRequests[tryNum-1].onerror=()=>{
-    //         found--;
-    //         error=true;
-    //     };
-    //     tryRequests[tryNum-1].send();
-    //     //console.log(tryNum);
-    //     //console.log(tryRequests);
-        
-    //     if(tryNum>128) break;
-        
-    //     tryNum++;
-    //     if(error) break;
-    // }
-    // console.log("found: "+found);
-    return 8;
-}
-countPosts().then((num)=>{
-    postCount=num;
-});
 
 function selectSection(object)
 {
@@ -79,6 +43,7 @@ function selectSection(object)
     refresh();
     loadPosts();
 }
+
 function refresh()
 {
     var numberOfPages = Math.ceil(postCount/postsPerPage);
