@@ -7,6 +7,7 @@ var sectionNames={
     art: "art"
 }
 
+var postsPerPage=5;
 var postCount=postCounts.general;
 var sectionName=sectionNames.general;
 
@@ -75,7 +76,14 @@ function selectSection(object)
     console.log(sectionName);
     console.log(postCount);
 
+    refresh();
     loadPosts();
+}
+function refresh()
+{
+    var numberOfPages = Math.ceil(postCount/postsPerPage);
+    let inputField = document.getElementById("pageNumInput");
+    inputField.setAttribute("max", (numberOfPages-1).toString());
 }
 
 
