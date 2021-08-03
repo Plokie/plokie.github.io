@@ -35,11 +35,19 @@ function selectSection(object)
     console.log(sectionName);
     console.log(postCount);
 
+    refresh();
     loadPosts();
+}
+var postsPerPage=5;
+function refresh()
+{
+    var numberOfPages = Math.ceil(postCount/postsPerPage);
+    let inputField = document.getElementById("pageNumInput");
+    inputField.setAttribute("max", (numberOfPages-1).toString());
 }
 
 
-var postsPerPage=5;
+
 
 var numberOfPages = Math.ceil(postCount/postsPerPage);
 var responses=0;

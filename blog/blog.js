@@ -1,5 +1,15 @@
-var postCount=8;
-var postsPerPage=5;
+var postCounts={
+    general: 8,
+    art: 1
+}
+var sectionNames={
+    general: "general",
+    art: "art"
+}
+
+var postCount=postCounts.spacegame;
+var sectionName=sectionNames.spacegame;
+
 
 var numberOfPages = Math.ceil(postCount/postsPerPage);
 var responses=0;
@@ -45,6 +55,29 @@ countPosts().then((num)=>{
     postCount=num;
 });
 
+function selectSection(object)
+{
+    var selectString = object.innerHTML
+    console.log(selectString);
+
+    switch(selectString)
+    {
+        case "General": postCount=postCounts.general; break;
+        case "Sketches": postCount=postCounts.art; break;
+    }
+
+    switch(selectString)
+    {
+        case "general": sectionName=sectionNames.general; break;
+        case "Sketches": sectionName=sectionNames.art; break;
+    }
+
+    console.log(sectionName);
+    console.log(postCount);
+
+    loadPosts();
+}
+
 
 
 function loadPosts(pageNum=0)
@@ -63,7 +96,7 @@ function loadPosts(pageNum=0)
     for(var i=0; i< Math.min( (pageNum+1)*postsPerPage , postCount ) - (postsPerPage*pageNum); i++)
     {
         requests[i]=new XMLHttpRequest(); //Makes a new XMLHttpRequest to add to the requests list.
-        requests[i].open('GET',"posts/post"+(i+1+(postsPerPage*pageNum))+".html"); //Gets the corresponding post
+        requests[i].open('GET',"posts/+"+sectionName+"+/post"+(i+1+(postsPerPage*pageNum))+".html"); //Gets the corresponding post
         requests[i].responseType='text'; //Makes sure it reads it as plaintext
         requests[i].onload=()=>{ //Upon loading
             responses++; //Increase the recorded number of responses
