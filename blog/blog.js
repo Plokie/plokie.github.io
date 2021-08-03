@@ -69,7 +69,7 @@ function selectSection(object)
 
     switch(selectString)
     {
-        case "general": sectionName=sectionNames.general; break;
+        case "General": sectionName=sectionNames.general; break;
         case "Sketches": sectionName=sectionNames.art; break;
     }
 
