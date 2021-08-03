@@ -56,10 +56,10 @@ function refresh()
 function loadPosts(pageNum=0)
 {
     //Reverses the page to load, this is so page 0=Newest and page 0+...x=Oldest
-    pageNum = numberOfPages-(pageNum+1);
     console.log(pageNum);
+    pageNum = numberOfPages-(pageNum+1);
     console.log(postCount);
-    console.log(sectionName);
+    console.log(sectionName.toString());
 
     //Resets the collections
     responses=0;
