@@ -80,6 +80,7 @@ function loadPosts(pageNum=0)
             }
         }
         requests[i].send(); //Sends the XMLHttpRequest
+        
     }
 }
 //Displays the posts that are currently loaded into the "requests" array.

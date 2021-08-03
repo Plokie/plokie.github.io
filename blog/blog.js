@@ -66,7 +66,7 @@ function loadPosts(pageNum=0)
     requests=[];
     titles=[];
     //var postsSidebar = document.getElementById("sidenav");
-    
+    console.log("aaa");
     //Counts from 0 to the number of posts that should be displayed this page
     //(I could probably simplify this but ehh i dont wanna break it - it works)
     for(var i=0; i< Math.min( (pageNum+1)*postsPerPage , postCount ) - (postsPerPage*pageNum); i++)
@@ -83,6 +83,7 @@ function loadPosts(pageNum=0)
             }
         }
         requests[i].send(); //Sends the XMLHttpRequest
+        console.log(responses);
     }
 }
 //Displays the posts that are currently loaded into the "requests" array.
