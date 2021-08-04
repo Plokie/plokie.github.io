@@ -54,9 +54,7 @@
             events: {
                 'onReady': function() {
                     console.log("onReady");
-                    player.unMute();
-                },
-                'onStateChange': function(){
+                    document.getElementById("ytplayer").contentWindow.postPessage("test");
                     player.unMute();
                 }
             }
