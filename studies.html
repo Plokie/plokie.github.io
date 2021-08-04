@@ -6,7 +6,7 @@
 </head>
 
 <style>
-    .center {
+    iframe{
         margin-top: 3%;
         margin-left: 20%;
         width: 60%;
@@ -17,14 +17,41 @@
         padding: 10px;
     }
 </style>
-
+<!-- 
 <script defer>
     if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         document.getElementById("body").innerHTML+="<div>On mobile</div>";
     }
 
-</script>
+</script> -->
 
 <body id="body">
-    <iframe class="center" width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <iframe class="center" width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+    <div id="ytplayer"></div>
+    <script>
+    // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+    var player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('ytplayer', {
+            height: '315',
+            width: '560',
+            videoId: 'dQw4w9WgXcQ',
+            playerVars: {
+                'autoplay': 1,
+                'showinfo': 0,
+                'controls': 0
+            }
+        });
+    }
+    </script>
+
+
+
 </body>
