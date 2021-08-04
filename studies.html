@@ -55,6 +55,9 @@
                 'onReady': function() {
                     console.log("onReady");
                     player.unMute();
+                },
+                'onStateChange': function(){
+                    player.unMute();
                 }
             }
         });
