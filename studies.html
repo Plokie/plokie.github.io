@@ -18,6 +18,13 @@
     }
 </style>
 
-<body>
+<script defer>
+    if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        document.getElementById("body").innerHTML+="<div>On mobile</div>";
+    }
+
+</script>
+
+<body id="body">
     <iframe class="center" width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
