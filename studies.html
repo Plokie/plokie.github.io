@@ -49,12 +49,12 @@
                 'autoplay': 1,
                 'mute': 1,
                 'showinfo': 0,
-                'controls': 0
+                'controls': 1
             },
             events: {
                 'onReady': function() {
                     console.log("onReady");
-                    document.getElementById("ytplayer").contentWindow.postPessage("test");
+                    document.getElementById("ytplayer").contentWindow.postMessage("test");
                     player.unMute();
                 }
             }
