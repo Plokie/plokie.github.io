@@ -1,10 +1,10 @@
 var postCounts={
-    fun2code: 1,
+    dscraft: 1,
     retailtycoon: 1,
     spacegame: 3
 }
 var sectionNames={
-    fun2code: "fun2code",
+    dscraft: "3dscraft",
     retailtycoon: "retailtycoon",
     spacegame: "spacegame"
 }
@@ -29,14 +29,14 @@ function selectSection(object)
     {
         case "Space Game": postCount=postCounts.spacegame; break;
         case "Retail Tycoon": postCount=postCounts.retailtycoon; break;
-        case "Fun2Code": postCount=postCounts.fun2code; break;
+        case "3DS Craft": postCount=postCounts.dscraft; break;
     }
 
     switch(selectString)
     {
         case "Space Game": sectionName=sectionNames.spacegame; break;
         case "Retail Tycoon": sectionName=sectionNames.retailtycoon; break;
-        case "Fun2Code": sectionName=sectionNames.fun2code; break;
+        case "3DS Craft": sectionName=sectionNames.dscraft; break;
     }
 
     console.log(sectionName);
