@@ -10,6 +10,47 @@ body{
 h1{
     margin-left:7%;
 }
+h2{
+    margin-left:8%;
+}
+img{
+    display: flex;
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    /*outline: 1px double white;*/
+}
+.section{
+    display: flex;
+    margin-left: 8%;
+    margin-right: 5%;
+    
+}
+.section .art
+{
+    display:flexbox;
+    width:20%;
+    height: 20%;
+    margin-left: 1%;
+    
+    margin-bottom:3%;
+    
+}
+.section .text{
+    margin-top:2%;
+    display: flex;
+    margin-left: -1%;
+    margin-right: 10%;
+    /*font-size: 20px;*/
+    background-color: #111;
+    padding: 1%;
+}
+
+.section .text a{
+    display: flex;
+    padding: 1%;
+}
+
 p{
     margin-left:10%;
     margin-right:10%;
