@@ -8,8 +8,8 @@ var sectionNames={
     retailtycoon: "retailtycoon",
     spacegame: "spacegame"
 }
-var postCount=postCounts.spacegame;
-var sectionName=sectionNames.spacegame;
+var postCount=postCounts.dscraft;
+var sectionName=sectionNames.dscraft;
 var postsPerPage=5;
 var numberOfPages = Math.ceil(postCount/postsPerPage);
 var responses=0;
