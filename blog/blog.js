@@ -106,7 +106,7 @@ function displayPosts()
 function pageNumUp()
 {
     let pageNumInput = document.getElementById("pageNumInput");
-    pageNumInput.value+=parseInt(1);
+    pageNumInput.value= parseInt(pageNumInput.value) + parseInt(1); //Not behaving >:(
     pageNumChange();
 }
 function pageNumDown()
