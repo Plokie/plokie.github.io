@@ -6,28 +6,8 @@
   <script src="devlogs.js" defer></script>
 </head>
 <body>
-
-  <div class="top-bar">
-    <a href="../">Home</a>
-
-    <div class="dropdown">
-      <button class="dropbtn">Arcade 
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="../arcade/">Arcade Homepage</a>
-        <a href="../arcade/games/">All Games</a>
-      </div>
-    </div> 
-    
-    <a href="./">Devlogs</a>
-    <a href="../blog/">Blog Blog</a>
-    <a href="../art/">Sketches Blog</a>
-  </div>
-
-  <p style="display: flex;">
-
-    <div class="sidenav" id="sidenav">
+  
+  <div class="sidenav" id="sidenav">
       <span class="text">Page:</span><input type="number" value="0" min="0" max="2" onchange="pageNumChange()" id="pageNumInput">
       
       <div class="btn-grp">
@@ -41,6 +21,30 @@
       <button class="dropbtn" type="button" onclick="selectSection(this)">Retail Tycoon</button> 
       <button class="dropbtn" type="button" onclick="selectSection(this)">3DS Craft</button> 
     </div>
+
+  <div class="top-bar">
+    <a href="../">Home</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Arcade 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../arcade/">Arcade Homepage</a>
+        <a href="../arcade/games/">All Games</a>
+        <a>--------</a>
+        <a href="../arcade/games/test/">Test Game</a>
+      </div>
+    </div> 
+    
+    <a href="./">Devlogs</a>
+    <a href="../blog/">Blog Blog</a>
+    <a href="../art/">Sketches Blog</a>
+  </div>
+
+  <p style="display: flex;">
+
+    
 
     <div class="blog-posts" id="blog-posts">
 
