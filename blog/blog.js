@@ -102,6 +102,20 @@ function displayPosts()
         posts.innerHTML+="<div class=\"blog-post\">"+requests[i].responseText+"</div>";
     }
 }
+
+function pageNumUp()
+{
+    let pageNumInput = document.getElementById("pageNumInput");
+    pageNumInput.value+=parseInt(1);
+    pageNumChange();
+}
+function pageNumDown()
+{
+    let pageNumInput = document.getElementById("pageNumInput");
+    pageNumInput.value-=parseInt(1);
+    pageNumChange();
+}
+
 //Called when the page number input value is changed
 function pageNumChange()
 {
