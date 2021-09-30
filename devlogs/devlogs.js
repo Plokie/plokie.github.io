@@ -99,6 +99,18 @@ function displayPosts()
         posts.innerHTML+="<div class=\"blog-post\">"+requests[i].responseText+"</div>";
     }
 }
+function pageNumUp()
+{
+    let pageNumInput = document.getElementById("pageNumInput");
+    pageNumInput.value= parseInt(pageNumInput.value) + parseInt(1);
+    pageNumChange();
+}
+function pageNumDown()
+{
+    let pageNumInput = document.getElementById("pageNumInput");
+    pageNumInput.value-=parseInt(1);
+    pageNumChange();
+}
 //Called when the page number input value is changed
 function pageNumChange()
 {
@@ -109,6 +121,10 @@ function pageNumChange()
     if(pageNumInput.value>numberOfPages-1)
     {
         pageNumInput.value=numberOfPages-1;
+    }
+    else if(pageNumInput.value<0)
+    {
+        pageNumInput.value=0;
     }
     else
     { //Load the page by passing in the page number as a parsed int
