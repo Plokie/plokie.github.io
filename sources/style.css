@@ -210,18 +210,23 @@ input{
 }
 
 .sidenav .btn-grp{
-    margin-left: 35%;
+    margin-left: 28%;
     margin-top: 10%;
-    
 }
-
 .sidenav .btn{
     background-color: hotpink;
     color:white;
     font-size: 48px;
+    width: 80px;
     border: none;
     border-radius: 10px;
     box-shadow: 0 6px #222;
+}
+.sidenav .btn:hover {background-color: #ffb3da;}
+.sidenav .btn:active {
+    background-color: #96416c;
+    box-shadow: 0 2px #222;
+    transform: translateY(4px);
 }
 
 .sidenav a {
