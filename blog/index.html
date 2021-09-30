@@ -25,12 +25,20 @@
     <a href="../devlogs/">Devlogs</a>
     <a href="./">Blog Blog</a>
     <a href="../art/">Sketches Blog</a>
+    <a href="../aboutme/">About Me</a>
   </div>
 
   <p style="display: flex;">
 
     <div class="sidenav" id="sidenav">
       <span class="text">Page:</span><input type="number" value="0" min="0" max="2" onchange="pageNumChange()" id="pageNumInput">
+      
+      <div class="btn-grp">
+        <button class="btn" onclick="pageNumDown()"><</button>
+        <button class="btn" onclick="pageNumUp()">></button>
+      </div>
+      
+      
       <h2 style="margin-left: 10%;">Posts</h2>
       <button class="dropbtn" type="button" onclick="selectSection(this)">General</button> 
       <button class="dropbtn" type="button" onclick="selectSection(this)">Sketches</button> 
