@@ -127,6 +127,10 @@ function pageNumChange()
     {
         pageNumInput.value=numberOfPages-1;
     }
+    else if(pageNumInput.value<0)
+    {
+        pageNumInput.value=0;
+    }
     else
     { //Load the page by passing in the page number as a parsed int
         console.log(parseInt(pageNumInput.value));
