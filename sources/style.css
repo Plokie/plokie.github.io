@@ -209,6 +209,21 @@ input{
     margin-left:4%;
 }
 
+.sidenav .btn-grp{
+    margin-left: 28%;
+    margin-top: 10%;
+    
+}
+
+.sidenav .btn{
+    background-color: hotpink;
+    color:white;
+    font-size: 48px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 6px #222;
+}
+
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
