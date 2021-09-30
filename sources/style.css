@@ -90,10 +90,10 @@ input{
 }
 .top-bar a{
     float: left;
-    font-size: 16px;
+    font-size: 300%;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 23px;
     text-decoration: none;
     transition-duration: 0.4s;
 }
@@ -104,7 +104,7 @@ input{
 }
 .top-bar .top-bar-text{
     float: left;
-    font-size: 16px;
+    font-size: 300%;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -118,11 +118,11 @@ input{
 .dropdown .dropbtn {
     background-color: #333;
     transition-duration: 0.4s;
-    font-size: 16px;  
+    font-size: 300%;  
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 14px 23px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -195,7 +195,7 @@ input{
 
 
 .sidenav {
-    width: 13%;
+    width: 27%;
     position: fixed;
     z-index: 1;
     top: 320px;
@@ -210,7 +210,7 @@ input{
 }
 
 .sidenav .btn-grp{
-    margin-left: 28%;
+    margin-left: 35%;
     margin-top: 10%;
     
 }
