@@ -101,14 +101,43 @@ function displayPosts()
 }
 function pageNumUp()
 {
-    let pageNumInput = document.getElementById("pageNumInput");
-    pageNumInput.value= parseInt(pageNumInput.value) + parseInt(1);
+    let pageNumInputs = document.querySelectorAll('[id=pageNumInput]');
+    console.log(pageNumInputs);
+    for(i=0; i<pageNumInputs.length; i++)
+    {
+        console.log(pageNumInputs[i].value);
+        pageNumInputs[i].value=parseInt(pageNumInputs[i].value)+1;
+
+        if(pageNumInputs[i].value>numberOfPages-1)
+        {
+            pageNumInputs[i].value=numberOfPages-1;
+        }
+        else if(pageNumInputs[i].value<0)
+        {
+            pageNumInputs[i].value=0;
+        }
+    }
+
     pageNumChange();
 }
 function pageNumDown()
 {
-    let pageNumInput = document.getElementById("pageNumInput");
-    pageNumInput.value-=parseInt(1);
+    let pageNumInputs = document.querySelectorAll('[id=pageNumInput]');
+    //console.log(pageNumInputs);
+    for(i=0; i<pageNumInputs.length; i++)
+    {
+        console.log(pageNumInputs[i].value);
+        pageNumInputs[i].value=parseInt(pageNumInputs[i].value)-1;
+
+        if(pageNumInputs[i].value>numberOfPages-1)
+        {
+            pageNumInputs[i].value=numberOfPages-1;
+        }
+        else if(pageNumInputs[i].value<0)
+        {
+            pageNumInputs[i].value=0;
+        }
+    }
     pageNumChange();
 }
 //Called when the page number input value is changed
@@ -116,21 +145,10 @@ function pageNumChange()
 {
     //Fetches the page number input box
     let pageNumInput = document.getElementById("pageNumInput");
-
-    //If the inputted number is too large, lower it.
-    if(pageNumInput.value>numberOfPages-1)
-    {
-        pageNumInput.value=numberOfPages-1;
-    }
-    else if(pageNumInput.value<0)
-    {
-        pageNumInput.value=0;
-    }
-    else
-    { //Load the page by passing in the page number as a parsed int
-        console.log(parseInt(pageNumInput.value));
-        loadPosts(parseInt(pageNumInput.value));
-    }
+    // //If the inputted number is too large, lower it.
+    //Load the page by passing in the page number as a parsed int
+    console.log(parseInt(pageNumInput.value));
+    loadPosts(parseInt(pageNumInput.value));
 }
 
 
