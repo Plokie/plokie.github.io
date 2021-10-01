@@ -49,6 +49,23 @@
     <div class="blog-posts" id="blog-posts">
 
     </div>
+    
+    <div class="horiznav">
+        <span class="text">Page:</span>
+        <input type="number" value="0" min="0" max="2" onchange="pageNumChange()" id="pageNumInput">
+        <div class="btn-grp">
+          <button class="btn" onclick="pageNumDown()"><</button>
+          <button class="btn" onclick="pageNumUp()">></button>
+        </div>
+
+        <div class="dropbtns">
+          <h1 style="margin-left: 10%;">Posts</h1>
+          <!-- <button class="dropbtn" type="button" onclick="openSectionSidebar(this)">All</button>  -->
+          <button class="dropbtn" type="button" onclick="selectSection(this)">Space Game</button> 
+          <button class="dropbtn" type="button" onclick="selectSection(this)">Retail Tycoon</button> 
+          <button class="dropbtn" type="button" onclick="selectSection(this)">3DS Craft</button> 
+        </div>
+      </div>
 
 
   </p>
