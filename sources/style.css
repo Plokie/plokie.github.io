@@ -357,4 +357,10 @@ input{
     .horiznav{
         display:block;
     }
+    .horiznav .text{
+        font-size: 30px;
+    }
+    .horiznav .dropbtn{
+        font-size: 40px;
+    }
 }
