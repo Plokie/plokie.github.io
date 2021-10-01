@@ -153,6 +153,7 @@ function pageNumChange()
     //Load the page by passing in the page number as a parsed int
     console.log(parseInt(pageNumInput.value));
     loadPosts(parseInt(pageNumInput.value));
+    window.scrollTo(0,0);
 }
 
 
