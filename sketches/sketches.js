@@ -91,7 +91,7 @@ function loadPosts(pageNum=0)
 function displayPosts()
 {
     //var postsSidebar = document.getElementById("sidenav");
-    var posts = document.getElementById("art-posts") //Getss the div where posts go
+    var posts = document.getElementById("art-blog-posts") //Getss the div where posts go
     posts.innerHTML=""; //Clears any currently loaded posts
 
     //Loops through each loaded request in reverse order
@@ -99,7 +99,7 @@ function displayPosts()
     for(var i=requests.length-1; i>=0; i--)
     {
         //Adds a new div post, with the html content inside it.
-        posts.innerHTML+="<div class=\"art-post\">"+requests[i].responseText+"</div>";
+        posts.innerHTML+="<div class=\"art-blog-post\">"+requests[i].responseText+"</div>";
     }
 }
 
