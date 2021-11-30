@@ -72,7 +72,7 @@ function loadPosts(pageNum=0)
     for(var i=0; i< Math.min( (pageNum+1)*postsPerPage , postCount ) - (postsPerPage*pageNum); i++)
     {
         requests[i]=new XMLHttpRequest(); //Makes a new XMLHttpRequest to add to the requests list.
-        requests[i].open('GET',"posts/"+sectionName+"/post"+(i+1+(postsPerPage*pageNum))+".html"); //Gets the corresponding post
+        requests[i].open('GET',"posts/"+sectionName+"/post"+(i+1+(postsPerPage*pageNum))+"/post.html"); //Gets the corresponding post
         requests[i].responseType='text'; //Makes sure it reads it as plaintext
         requests[i].onload=()=>{ //Upon loading
             responses++; //Increase the recorded number of responses
