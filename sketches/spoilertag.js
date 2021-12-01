@@ -1,3 +1,3 @@
-function spoiler(this){
-  console.log(this.for);
+function spoiler(btn){
+  console.log(btn.for);
 }
