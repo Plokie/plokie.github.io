@@ -384,22 +384,15 @@ input{
 }*/
 
 .spoiler-image{
-	filter: blur(10px);
+	filter: blur(15px);
 }
 
 .spoiler-button{
-	position: absolute;
-	top: 50%;
-	bottom: 0;
-	left: 50%;
-	height: 3rem;
-	line-height: 3rem;
-	width: 12.5%;
-	padding: 0 1rem;
-	font-size: 1rem;
+	width:100%;
+	font-size: 4rem;
 	margin: auto;
-	background-color: rgba(0,0,0,0.8);
-	color: #FFF;
+	background-color: hotpink;
+	color: white;
 	text-align: center;
 	border-radius: 1rem;
 	cursor: pointer;
