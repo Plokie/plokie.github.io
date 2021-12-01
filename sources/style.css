@@ -384,7 +384,7 @@ input{
 }*/
 
 .spoiler-image{
-	filter: blur(75px);
+	filter: blur(40px);
 }
 
 .spoiler-button{
