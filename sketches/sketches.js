@@ -1,10 +1,8 @@
 var postCounts={
-    general: 1,
-    art: 1
+    general: 2
 }
 var sectionNames={
-    general: "general",
-    art: "art"
+    general: "general"
 }
 
 
