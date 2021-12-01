@@ -409,11 +409,12 @@ input{
     }
     .art-blog-post{
         font-size: 30px;
+	width: 606px;
     }
     .art-blog-post .images img
     {
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        height: 50%;
     }
     .horiznav{
         display:block;
