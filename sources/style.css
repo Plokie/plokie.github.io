@@ -384,14 +384,13 @@ input{
 }*/
 
 .spoiler-button{
-    position: absolute;
-	top: 1;
+	poistion: absolute;
+	top: 50%;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	left: 50%;
 	height: 3rem;
 	line-height: 3rem;
-	width: 50%;
+	width: 12.5%;
 	padding: 0 1rem;
 	font-size: 1rem;
 	margin: auto;
