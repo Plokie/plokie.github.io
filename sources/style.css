@@ -383,6 +383,10 @@ input{
     font-size: larger;
 }*/
 
+.spoiler-image{
+	filter: blur(10px);
+}
+
 .spoiler-button{
 	position: absolute;
 	top: 50%;
