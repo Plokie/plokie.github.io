@@ -294,6 +294,8 @@ input{
 
 .art-blog-post img{
     padding: 0;
+    margin-left: 0px;
+    margin-right; 3px;
 }
 
 .horiznav {
