@@ -292,6 +292,10 @@ input{
     display: flex;
 }
 
+.art-blog-post img{
+    padding: 0;
+}
+
 .horiznav {
     background-color: #333;
     padding: 3%;
