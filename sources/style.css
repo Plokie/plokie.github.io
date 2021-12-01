@@ -384,7 +384,7 @@ input{
 }*/
 
 .spoiler-button{
-	poistion: absolute;
+	position: absolute;
 	top: 50%;
 	bottom: 0;
 	left: 50%;
