@@ -386,6 +386,10 @@ input{
     .art-blog-post{
         font-size: 30px;
     }
+    .art-blog-post .images img
+    {
+        height: auto;
+    }
     .horiznav{
         display:block;
     }
