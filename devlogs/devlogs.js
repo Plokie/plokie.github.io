@@ -1,7 +1,7 @@
 var postCounts={
     dscraft: 3,
     retailtycoon: 2,
-    spacegame: 3
+    spacegame: 4
 }
 var sectionNames={
     dscraft: "3dscraft",
