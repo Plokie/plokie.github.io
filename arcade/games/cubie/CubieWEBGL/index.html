@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Cubie</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 960px; height: 540px; background: #231F20"></canvas>
+    <script src="Build/CubieWEBGL.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/CubieWEBGL.data",
+        frameworkUrl: "Build/CubieWEBGL.framework.js",
+        codeUrl: "Build/CubieWEBGL.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Plokie",
+        productName: "Cubie",
+        productVersion: "0.1",
+      });
+    </script>
+  </body>
+</html>
