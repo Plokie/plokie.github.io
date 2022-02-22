@@ -1,5 +1,5 @@
 var postCounts={
-    general: 17
+    general: 18
 }
 var sectionNames={
     general: "general"
